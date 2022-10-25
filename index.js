@@ -18,46 +18,36 @@ function checkInputs() {
     const passwordtwoValue = passwordtwo.value.trim()
 
     if(usernameValue === '') {
-        // mostrar erro
-        // add classe
+
+     
         setErrorFor(username, 'Preencha esse campo')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(username)
     }
 
     if(emailValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(email, 'Preencha esse campo')
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, 'Email inválido')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(email)
     }
    
     if(passwordValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(password, 'Preencha esse campo')
 
     } else if(passwordValue.length < 8) { 
         setErrorFor(password, 'Senha deve ter mais que 8 caracteres')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(password)
     }
 
     if(passwordtwoValue === '') {
-        // mostrar erro
-        // add classe
         setErrorFor(passwordtwo, 'Preencha esse campo')
 
     } else if(passwordValue !== passwordtwoValue) { 
         setErrorFor(passwordtwo, 'Senhas não tão iguais')
     } else {
-        // adicionar a classe de sucesso
         setSuccessFor(passwordtwo)
     }
 
